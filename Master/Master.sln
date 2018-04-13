@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer", "IdentityServer\IdentityServer.csproj", "{B19B35E4-6AE2-4D9F-9206-A7106A509F97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\Api.csproj", "{489D7A56-9583-403A-BDA8-561265F310BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "WebApp\WebApp.csproj", "{1876A99D-E33B-4507-A370-7A4A92E8592B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B19B35E4-6AE2-4D9F-9206-A7106A509F97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B19B35E4-6AE2-4D9F-9206-A7106A509F97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B19B35E4-6AE2-4D9F-9206-A7106A509F97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B19B35E4-6AE2-4D9F-9206-A7106A509F97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{489D7A56-9583-403A-BDA8-561265F310BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{489D7A56-9583-403A-BDA8-561265F310BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{489D7A56-9583-403A-BDA8-561265F310BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{489D7A56-9583-403A-BDA8-561265F310BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1876A99D-E33B-4507-A370-7A4A92E8592B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1876A99D-E33B-4507-A370-7A4A92E8592B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1876A99D-E33B-4507-A370-7A4A92E8592B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1876A99D-E33B-4507-A370-7A4A92E8592B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BD6F47FC-3DA4-4B48-B2CD-C9C703F45B32}
+	EndGlobalSection
+EndGlobal
