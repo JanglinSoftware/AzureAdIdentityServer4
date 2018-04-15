@@ -34,11 +34,12 @@ namespace IdentityServer
             services
                 .AddAuthentication(options =>
                 {
+                    options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
                     options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
                     options.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme;
                 })
                 .AddAzureAd(options => Configuration.Bind("AzureAd", options))
-                .AddCookie();
+                .AddCookie("cookies");
             //.AddOpenIdConnect("oidc", "OpenID Connect", options =>
             //{
             //    options.SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme;

@@ -4,6 +4,7 @@ using IdentityServer4;
 using IdentityServer4.Models;
 using IdentityServer4.Services;
 using IdentityServer4.Stores;
+using IdentityServer4.Test;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -18,8 +19,18 @@ namespace IdentityServer.Controllers
     public class AccountController : Controller
     {
         private readonly IIdentityServerInteractionService _interaction;
-        private readonly InMemoryUserLoginService _loginService;
+        private readonly TestUserStore _loginService;
         private readonly IClientStore _clientStore;
+
+        public AccountController(
+            TestUserStore loginService,
+            IIdentityServerInteractionService interaction,
+            IClientStore clientStore)
+        {
+            _loginService = loginService;
+            _interaction = interaction;
+            _clientStore = clientStore;
+        }
 
         /// <summary>
         /// Show login page
@@ -72,7 +83,7 @@ namespace IdentityServer.Controllers
                         };
                     };
 
-                    await HttpContext.SignInAsync(user.Subject, user.Username, props);
+                    //await HttpContext.SignInAsync(user.SubjectId, user., props);
 
                     // make sure the returnUrl is still valid, and if yes - redirect back to authorize endpoint
                     if (_interaction.IsValidReturnUrl(model.ReturnUrl))
@@ -163,7 +174,7 @@ namespace IdentityServer.Controllers
             }
 
             // issue authentication cookie for user
-            await HttpContext.SignInAsync(user.Subject, user.Username, provider, additionalClaims.ToArray());
+            //await HttpContext.SignInAsync(user.Subject, user.Username, provider, additionalClaims.ToArray());
 
             // delete temporary cookie used during external authentication
             await HttpContext.SignOutAsync(IdentityServerConstants.ExternalCookieAuthenticationScheme);
