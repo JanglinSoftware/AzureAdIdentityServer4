@@ -36,7 +36,6 @@ namespace IdentityServer
                 {
                     options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
                     options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-                    options.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme;
                 })
                 .AddAzureAd(options => Configuration.Bind("AzureAd", options))
                 .AddCookie("cookies");
